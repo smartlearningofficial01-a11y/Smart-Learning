@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="css/style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Learning | Student Dashboard</title>
+
+<style>
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+background:#f4f6fb;
+}
+
+header{
+background:#0b2a4a;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h2{
+margin:0;
+}
+
+.logout{
+background:orange;
+border:none;
+padding:8px 15px;
+color:white;
+cursor:pointer;
+border-radius:5px;
+}
+
+.container{
+padding:40px;
+}
+
+.card{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.join{
+background:green;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:5px;
+cursor:pointer;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+padding:12px;
+border-bottom:1px solid #ddd;
+text-align:left;
+}
+
+th{
+background:#0b2a4a;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>SMART LEARNING Dashboard</h2>
+
+<button class="logout" onclick="logout()">Logout</button>
+
+</header>
+
+<div class="container">
+
+<h3>Your Upcoming Classes</h3>
+
+<table>
+
+<thead>
+
+<tr>
+<th>Subject</th>
+<th>Tutor</th>
+<th>Date</th>
+<th>Time</th>
+<th>Join Class</th>
+</tr>
+
+</thead>
+
+<tbody id="classTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+
+const supabaseUrl="https://zioklpwtkjxnvfxvtoti.supabase.co"
+
+const supabaseKey="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inppb2tscHd0a2p4bnZmeHZ0b3RpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNDk5NzUsImV4cCI6MjA4ODcyNTk3NX0.PYbHIEIejaWBxCzKNqD2tVJuUND5jNIPHiqfdbtQgxo"
+
+const supabase=supabase.createClient(supabaseUrl,supabaseKey)
+
+
+async function checkLogin(){
+
+const {data:{session}}=await supabase.auth.getSession()
+
+if(!session){
+
+window.location="login.html"
+
+}
+
+}
+
+checkLogin()
+
+
+
+async function loadClasses(){
+
+const {data,error}=await supabase
+.from("Bookings")
+.select("*")
+.order("class_date",{ascending:true})
+
+const table=document.getElementById("classTable")
+
+data.forEach(row=>{
+
+table.innerHTML+=`
+
+<tr>
+
+<td>${row.subject}</td>
+
+<td>${row.tutor}</td>
+
+<td>${row.class_date}</td>
+
+<td>${row.class_time}</td>
+
+<td>
+<button class="join" onclick="joinClass()">Join</button>
+</td>
+
+</tr>
+
+`
+
+})
+
+}
+
+loadClasses()
+
+
+function joinClass(){
+
+window.open("https://zoom.us/j/123456789")
+
+}
+
+
+async function logout(){
+
+await supabase.auth.signOut()
+
+window.location="login.html"
+
+}
+
+</script>
+<script src="js/app.js"></script>
+</body>
+
+</html>

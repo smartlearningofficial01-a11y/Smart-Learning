@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="css/style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SMART LEARNING | Online Tutoring</title>
+
+<style>
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+background:#f5f7fb;
+}
+
+/* NAVBAR */
+
+header{
+background:#0b2a4a;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h2{
+color:white;
+margin:0;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:orange;
+}
+
+/* HERO SECTION */
+
+.hero{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:center;
+padding:60px 40px;
+background:white;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.hero-text h1{
+font-size:42px;
+color:#0b2a4a;
+}
+
+.hero-text p{
+font-size:18px;
+margin-top:15px;
+}
+
+.hero-buttons{
+margin-top:25px;
+}
+
+.btn{
+padding:12px 22px;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+margin-right:10px;
+}
+
+.btn-primary{
+background:orange;
+color:white;
+}
+
+.btn-secondary{
+background:#0b2a4a;
+color:white;
+}
+
+.hero-img{
+flex:1;
+min-width:300px;
+text-align:center;
+}
+
+.hero-img img{
+width:90%;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* SUBJECTS */
+
+.section{
+padding:60px 40px;
+text-align:center;
+}
+
+.section h2{
+color:#0b2a4a;
+margin-bottom:40px;
+}
+
+.subject-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+max-width:1000px;
+margin:auto;
+}
+
+.subject{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.subject h3{
+color:#0b2a4a;
+}
+
+/* STUDENTS SECTION */
+
+.students{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:30px;
+}
+
+.students img{
+width:300px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* REVIEWS */
+
+.reviews{
+background:white;
+padding:60px 40px;
+}
+
+.review-box{
+max-width:800px;
+margin:auto;
+background:#f4f6fb;
+padding:25px;
+border-radius:8px;
+margin-bottom:20px;
+}
+
+/* CTA */
+
+.cta{
+background:#0b2a4a;
+color:white;
+text-align:center;
+padding:60px 30px;
+}
+
+.cta button{
+background:orange;
+border:none;
+padding:14px 25px;
+font-size:16px;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>SMART LEARNING</h2>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="curriculum.html">Curriculum</a>
+<a href="register.html">Register</a>
+<a href="trial.html">Free Trial</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Expert Online Tutoring for UK & Australian Students</h1>
+
+<p>
+
+Smart Learning provides professional online tutoring in Mathematics, English, Science, and Computer Science for students following the UK and Australian curriculum.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="trial.html">
+
+<button class="btn btn-primary">Book Free Trial</button>
+
+</a>
+
+<a href="register.html">
+
+<button class="btn btn-secondary">Register Now</button>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-img">
+
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
+
+</div>
+
+</section>
+
+
+<!-- SUBJECTS -->
+
+<section class="section">
+
+<h2>Subjects We Offer</h2>
+
+<div class="subject-grid">
+
+<div class="subject">
+<h3>Mathematics</h3>
+<p>Algebra, Geometry, Problem Solving</p>
+</div>
+
+<div class="subject">
+<h3>English</h3>
+<p>Grammar, Writing, Reading</p>
+</div>
+
+<div class="subject">
+<h3>Science</h3>
+<p>Physics, Chemistry, Biology</p>
+</div>
+
+<div class="subject">
+<h3>Computer Science</h3>
+<p>Programming & Digital Skills</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STUDENTS -->
+
+<section class="section">
+
+<h2>Students Learning with Smart Learning</h2>
+
+<div class="students">
+
+<img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
+
+<img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94">
+
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+
+</div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="reviews">
+
+<h2 style="text-align:center;color:#0b2a4a;">Parent Reviews</h2>
+
+<div class="review-box">
+
+<p>
+
+"Smart Learning helped my son improve his Maths grades dramatically. The tutors are very professional."
+
+</p>
+
+<b>Parent – London, UK</b>
+
+</div>
+
+<div class="review-box">
+
+<p>
+
+"Excellent tutoring service for Australian curriculum. My daughter loves the online lessons."
+
+</p>
+
+<b>Parent – Sydney, Australia</b>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Start Your Learning Journey Today</h2>
+
+<p>Book a free trial class and experience professional tutoring.</p>
+
+<a href="trial.html">
+
+<button>Book Free Trial Class</button>
+
+</a>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Smart Learning | International Online Tutoring</p>
+
+</footer>
+<script src="js/app.js"></script>
+</body>
+
+</html>

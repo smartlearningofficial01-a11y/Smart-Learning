@@ -1,0 +1,46 @@
+body{
+font-family: Arial;
+margin:0;
+background:white;
+}
+
+header{
+background:#0a1f44;
+color:white;
+padding:15px;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+text-align:center;
+padding:120px;
+background:#0a1f44;
+color:white;
+}
+
+.btn{
+background:orange;
+padding:12px 25px;
+color:white;
+text-decoration:none;
+border-radius:5px;
+}
